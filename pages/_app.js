@@ -1,7 +1,7 @@
-import '../styles/globals.css'
+import '../styles/tailwind.css'
 
-function MyApp({ Component, pageProps }) {
+function BetterGrue({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default BetterGrue
