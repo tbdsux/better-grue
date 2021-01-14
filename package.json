@@ -10,6 +10,7 @@
   "dependencies": {
     "autoprefixer": "^10.2.1",
     "axios": "^0.21.1",
+    "highlight.js": "^10.5.0",
     "moment": "^2.29.1",
     "mongodb": "^3.6.3",
     "nanoid": "^3.1.20",
@@ -17,6 +18,7 @@
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-highlight.js": "^1.0.7",
     "tailwindcss": "^2.0.2"
   }
 }
