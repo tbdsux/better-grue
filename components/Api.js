@@ -4,7 +4,7 @@ import 'highlight.js/styles/atom-one-dark.css'
 
 export default function APIDocumentation() {
   return (
-    <div className="w-5/6 mx-auto py-20">
+    <div className="w-5/6 mx-auto py-20" id="api">
       <div>
         <h2 className="text-4xl text-gray-600 font-black">
           Basic API Documentation

@@ -14,12 +14,16 @@ export default function Navbar() {
         </div>
         <ul className="text-xl text-gray-400 flex items-center">
           <li className="pr-2 md:pr-8 tracking-wide font-black">
-            <a href="#" className="hover:text-green-400">
+            <a href="#api" className="hover:text-green-400">
               API
             </a>
           </li>
           <li className="pl-2 md:pl-8 tracking-wide font-black">
-            <a href="#" className="hover:text-green-400">
+            <a
+              target="_blank"
+              href="https://github.com/TheBoringDude/better-grue"
+              className="hover:text-green-400"
+            >
               Github
             </a>
           </li>

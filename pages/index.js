@@ -36,7 +36,10 @@ export default function Home() {
         </a>
         <div className="mt-4">
           &copy; {new Date().getFullYear()} |{' '}
-          <a href="#" className="underline hover:text-gray-600 font-black">
+          <a
+            href="https://github.com/TheBoringDude"
+            className="underline hover:text-gray-600 font-black"
+          >
             @TheBoringDude
           </a>
         </div>
