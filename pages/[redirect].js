@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 const { DOMAIN_URL } = process.env
 
+// handles redirections for shortlinks
 export default function Redirect({ data }) {
   useEffect(() => {
     if (data) {

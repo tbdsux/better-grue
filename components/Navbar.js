@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <div className="w-full py-4">
-      <nav className="w-4/5 mx-auto flex items-center justify-between">
+      <nav className="w-11/12 md:w-4/5 mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <img
             src="https://img.icons8.com/flat_round/64/000000/crane-hook.png"
@@ -12,13 +12,13 @@ export default function Navbar() {
             Grue.cf
           </h1>
         </div>
-        <ul className="text-xl text-gray-400 flex">
-          <li className="pr-8 tracking-wide font-black">
+        <ul className="text-xl text-gray-400 flex items-center">
+          <li className="pr-2 md:pr-8 tracking-wide font-black">
             <a href="#" className="hover:text-green-400">
               API
             </a>
           </li>
-          <li className="pl-8 tracking-wide font-black">
+          <li className="pl-2 md:pl-8 tracking-wide font-black">
             <a href="#" className="hover:text-green-400">
               Github
             </a>

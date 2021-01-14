@@ -113,7 +113,7 @@ export default function ShrinkForm() {
           title="Please enter a valid url"
           className={`${
             validUrl ? 'border-gray-300' : 'border-red-500'
-          } py-3 w-full text-2xl border-2 text-gray-500 px-5 rounded-full outline-none focus:border-green-400 focus:text-green-500`}
+          } py-3 w-full text-xl sm:text-2xl border-2 text-gray-500 px-5 rounded-full outline-none focus:border-green-400 focus:text-green-500`}
           placeholder="Enter a very long url in here..."
         />
         {!validUrl ? (
@@ -127,7 +127,7 @@ export default function ShrinkForm() {
         {shrinkDone ? (
           <button
             onClick={AnotherShrink}
-            className="py-2 text-xl font-black ml-3 text-white rounded-lg outline-none focus:outline-none px-4 bg-gray-500 hover:bg-gray-600"
+            className="py-2 tex-lg sm:text-xl font-black ml-3 text-white rounded-lg outline-none focus:outline-none px-4 bg-gray-500 hover:bg-gray-600"
           >
             shorten another
           </button>
@@ -135,7 +135,7 @@ export default function ShrinkForm() {
           <button
             onClick={handleShortenClick}
             disabled={buttonText === 'shrinking...'}
-            className={`py-2 text-xl font-black uppercase tracking-wide ${
+            className={`py-2 tex-lg sm:text-xl font-black uppercase tracking-wide ${
               buttonText === 'shorten'
                 ? 'bg-green-500 cursor-pointer'
                 : 'bg-green-600 cursor-not-allowed'
@@ -150,7 +150,7 @@ export default function ShrinkForm() {
 
       {/* this is where the result shorten url is */}
       {shrinkDone ? (
-        <div className="bg-gray-100 ml-2 w-full py-2 rounded-lg flex items-center justify-between px-4">
+        <div className="bg-gray-100 ml-2 w-full py-2 rounded-lg flex flex-col xs:flex-row items-center justify-between px-4">
           <button
             title="Copy the generated shortlink"
             onClick={() => {
@@ -166,7 +166,7 @@ export default function ShrinkForm() {
           <a
             href="#"
             target="_blank"
-            className="text-xl font-bold text-gray-700 tracking-wide"
+            className="text-xl font-bold text-gray-700 tracking-wide overflow-auto ml-2 mt-2 xs:mt-0"
           >
             {grueData.shortlink.long}
           </a>

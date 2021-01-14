@@ -13,7 +13,7 @@ export default function Home() {
       {/* main navigation menu */}
       <Navbar />
 
-      {/* showcase section */}
+      {/* showcase section => it includes the main form too */}
       <Showcase />
     </Layout>
   )
