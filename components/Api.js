@@ -22,7 +22,7 @@ export default function APIDocumentation() {
                 <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{' '}
                 Shorten a new url
               </h3>
-              <div className="my-3 flex items-center text-xl text-gray-600">
+              <div className="my-3 flex flex-col xs:flex-row items-center text-xl text-gray-600">
                 <p>endpoint: </p>
                 <p className="py-1 px-2 rounded-lg bg-gray-800 text-gray-300 ml-2 tracking-wider">
                   /api/generate
@@ -37,7 +37,7 @@ export default function APIDocumentation() {
                 </Hightlight>
               </div>
               <div className="mt-4">
-                <p className="text-xl">Response</p>
+                <p className="text-xl text-gray-600">Response</p>
                 <div className="rounded-lg">
                   <Hightlight language="json">
                     {JSON.stringify(
@@ -66,7 +66,7 @@ export default function APIDocumentation() {
                 <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{' '}
                 Get grue (shortened / shortlink) data
               </h3>
-              <div className="my-3 flex items-center text-xl text-gray-600">
+              <div className="my-3 flex flex-col xs:flex-row items-center text-xl text-gray-600">
                 <p>endpoint: </p>
                 <p className="py-1 px-2 rounded-lg bg-gray-800 text-gray-300 ml-2 tracking-wider">
                   /api/get/[shortlinkID]
@@ -79,7 +79,7 @@ export default function APIDocumentation() {
                 </Hightlight>
               </div>
               <div className="mt-4">
-                <p className="text-xl">Response</p>
+                <p className="text-xl text-gray-600">Response</p>
                 <div className="rounded-lg">
                   <Hightlight language="json">
                     {JSON.stringify(
