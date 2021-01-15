@@ -19,6 +19,9 @@ export default async (req, res) => {
       return null
     })
 
+  // set header cache
+  res.setHeader('Cache-Control', 's-maxage=31536000')
+
   // if link == null
   if (!link) {
     res.status(404).end('404 Not Found! The shortlink was not found.')

@@ -34,7 +34,7 @@ export default async (req, res) => {
           // generate a new shorten data
           // if the request_url is not found in the db, continue
           // get schema data from function
-          const NewGrueLink = generate_base_schema(url)
+          const NewGrueLink = await generate_base_schema(url)
 
           // insert to the database
           await db
@@ -63,6 +63,9 @@ export default async (req, res) => {
             'There seems to be a problem in our side. Please try again later...',
           )
       } else {
+        // set header cache
+        res.setHeader('Cache-Control', 's-maxage=31536000')
+
         // send back the link generated
         res.status(200).json(link)
       }
