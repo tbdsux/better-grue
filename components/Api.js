@@ -1,7 +1,3 @@
-// to be used for sample response highlighting
-import Hightlight from 'react-highlight.js'
-import 'highlight.js/styles/atom-one-dark.css'
-
 export default function APIDocumentation() {
   return (
     <div className="w-5/6 mx-auto py-20" id="api">
@@ -29,33 +25,37 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div>
-                <Hightlight language="bash">
-                  curl -X POST https://grue.cf/api/generate -H 'Content-Type:
-                  application/json' <br />
-                  -d {JSON.stringify({ url: 'https://www.google.com' })}
-                </Hightlight>
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white">
+                <pre>
+                  <code>
+                    curl -X POST https://grue.cf/api/generate -H 'Content-Type:
+                    application/json' <br />
+                    -d {JSON.stringify({ url: 'https://www.google.com' })}
+                  </code>
+                </pre>
               </div>
               <div className="mt-4">
                 <p className="text-xl text-gray-600">Response</p>
-                <div className="rounded-lg">
-                  <Hightlight language="json">
-                    {JSON.stringify(
-                      {
-                        _id: '5ffefa6096d4370008ba400e',
-                        request_url: 'https://www.google.com',
-                        redirect: 'https://www.google.com',
-                        shortlink: {
-                          short: 'QU47Q',
-                          long: 'https://grue.cf/QU47Q',
+                <div className="rounded-md bg-gray-600 p-3 text-gray-100">
+                  <pre>
+                    <code>
+                      {JSON.stringify(
+                        {
+                          _id: '5ffefa6096d4370008ba400e',
+                          request_url: 'https://www.google.com',
+                          redirect: 'https://www.google.com',
+                          shortlink: {
+                            short: 'QU47Q',
+                            long: 'https://grue.cf/QU47Q',
+                          },
+                          created_date: '2021-01-13T13:49:20Z',
+                          last_visit_date: '2021-01-13T13:49:20Z',
                         },
-                        created_date: '2021-01-13T13:49:20Z',
-                        last_visit_date: '2021-01-13T13:49:20Z',
-                      },
-                      null,
-                      2,
-                    )}
-                  </Hightlight>
+                        null,
+                        2,
+                      )}
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
@@ -73,31 +73,33 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div>
-                <Hightlight language="bash">
-                  curl https://grue.cf/api/get/QU47Q
-                </Hightlight>
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white">
+                <pre>
+                  <code>curl https://grue.cf/api/get/QU47Q</code>
+                </pre>
               </div>
               <div className="mt-4">
                 <p className="text-xl text-gray-600">Response</p>
-                <div className="rounded-lg">
-                  <Hightlight language="json">
-                    {JSON.stringify(
-                      {
-                        _id: '5ffefa6096d4370008ba400e',
-                        request_url: 'https://www.google.com',
-                        redirect: 'https://www.google.com',
-                        shortlink: {
-                          short: 'QU47Q',
-                          long: 'https://grue.cf/QU47Q',
+                <div className="rounded-md bg-gray-600 p-3 text-gray-100">
+                  <pre>
+                    <code>
+                      {JSON.stringify(
+                        {
+                          _id: '5ffefa6096d4370008ba400e',
+                          request_url: 'https://www.google.com',
+                          redirect: 'https://www.google.com',
+                          shortlink: {
+                            short: 'QU47Q',
+                            long: 'https://grue.cf/QU47Q',
+                          },
+                          created_date: '2021-01-13T13:49:20Z',
+                          last_visit_date: '2021-01-13T13:49:20Z',
                         },
-                        created_date: '2021-01-13T13:49:20Z',
-                        last_visit_date: '2021-01-13T13:49:20Z',
-                      },
-                      null,
-                      2,
-                    )}
-                  </Hightlight>
+                        null,
+                        2,
+                      )}
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
