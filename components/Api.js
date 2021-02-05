@@ -25,7 +25,7 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white">
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white overflow-y-scroll">
                 <pre>
                   <code>
                     curl -X POST https://grue.cf/api/generate -H 'Content-Type:
@@ -36,7 +36,7 @@ export default function APIDocumentation() {
               </div>
               <div className="mt-4">
                 <p className="text-xl text-gray-600">Response</p>
-                <div className="rounded-md bg-gray-600 p-3 text-gray-100">
+                <div className="rounded-md bg-gray-600 p-3 text-gray-100 overflow-y-scroll">
                   <pre>
                     <code>
                       {JSON.stringify(
@@ -73,14 +73,14 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white">
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white overflow-y-scroll">
                 <pre>
                   <code>curl https://grue.cf/api/get/QU47Q</code>
                 </pre>
               </div>
               <div className="mt-4">
                 <p className="text-xl text-gray-600">Response</p>
-                <div className="rounded-md bg-gray-600 p-3 text-gray-100">
+                <div className="rounded-md bg-gray-600 p-3 text-gray-100 overflow-y-scroll">
                   <pre>
                     <code>
                       {JSON.stringify(
