@@ -17,7 +17,11 @@ export default function Showcase() {
           <ShrinkForm />
         </div>
         <div className="relative w-full sm:w-1/2 h-96">
-          <Image src="/showcase.svg" layout="fill" />
+          <Image
+            src="/showcase.svg"
+            layout="fill"
+            alt="Better Grue Banner Image"
+          />
         </div>
       </div>
     </div>

@@ -33,11 +33,12 @@ export default function Home() {
       {/* simple footer */}
       <footer className="w-4/5 mx-auto text-center py-8 text-gray-500 text-xl">
         <a href="https://www.buymeacoffee.com/theboringdude" target="_blank">
-          <div className="h-16 w-56 mx-auto relative z-40">
+          <div className="mx-auto z-40">
             <Image
               alt="Buy Me A Coffee"
               src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-              layout="fill"
+              height="75"
+              width="230"
             />
           </div>
         </a>
