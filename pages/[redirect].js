@@ -1,45 +1,32 @@
-import { useEffect } from 'react'
-import Error from 'next/error'
+import { useEffect, useState } from "react";
 
-const { DOMAIN_URL } = process.env
+import Error from "next/error";
+import { useRouter } from "next/router";
 
 // handles redirections for shortlinks
-export default function Redirect({ data }) {
-  // data == null
-  if (!data) {
-    // return 404 error
-    // this will be edited in the future
-    // todo: add a simple error template
-    return <Error statusCode={404} />
-  }
+export default function RedirectFromUrl() {
+	const [error, setError] = useState(false);
+	const router = useRouter();
+	const { redirect } = router.query;
 
-  // if there is data
-  // redirect to it
-  useEffect(() => {
-    window.location.href = data.redirect
-  }, [data])
+	useEffect(() => {
+		if (redirect) {
+			fetch(`/api/get/${redirect}`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ url: redirect }),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					router.push(data.redirect);
+				})
+				.catch(() => {
+					setError(true);
+				});
+		}
+	}, [redirect]);
 
-  return null
-}
-
-export async function getServerSideProps(context) {
-  // query data
-  // DOMAIN_URL -> should end with `/` (trailing slash)
-  const res = await fetch(`${DOMAIN_URL}api/get/${context.params.redirect}`)
-
-  var data = {}
-
-  // other statuscodes returns null
-  // to the data variable
-  if (res.status === 200) {
-    data = await res.json()
-  } else {
-    data = null
-  }
-
-  return {
-    props: {
-      data,
-    },
-  }
+	return <>{error ? <Error statusCode={404} /> : null}</>;
 }
