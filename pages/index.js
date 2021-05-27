@@ -1,64 +1,69 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import Layout, { WebsiteName } from '../components/Layout'
-import Navbar from '../components/Navbar'
-import Showcase from '../components/index/Showcase'
-import APIDocumentation from '../components/Api'
-import TermsOfUse from '../components/Terms'
+import { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import Layout, { WebsiteName } from "../components/Layout";
+import Navbar from "../components/Navbar";
+import Showcase from "../components/index/Showcase";
+import APIDocumentation from "../components/Api";
+import TermsOfUse from "../components/Terms";
 
 export default function Home() {
-  const [showTerms, setShowTerms] = useState(false)
+	const [showTerms, setShowTerms] = useState(false);
 
-  return (
-    <Layout>
-      <Head>
-        <title>Better Url Shrinker | {WebsiteName}</title>
-      </Head>
+	return (
+		<Layout>
+			<Head>
+				<title>Better Url Shrinker | {WebsiteName}</title>
+			</Head>
 
-      {/* terms of use */}
-      <TermsOfUse showTerms={showTerms} setShowTerms={setShowTerms} />
+			{/* terms of use */}
+			<TermsOfUse showTerms={showTerms} setShowTerms={setShowTerms} />
 
-      {/* main navigation menu */}
-      <Navbar />
+			{/* main navigation menu */}
+			<Navbar />
 
-      {/* showcase section => it includes the main form too */}
-      <Showcase />
+			<hr />
 
-      <hr />
+			{/* showcase section => it includes the main form too */}
+			<Showcase />
 
-      {/* api documentation */}
-      <APIDocumentation />
+			<hr />
 
-      {/* simple footer */}
-      <footer className="w-4/5 mx-auto text-center py-8 text-gray-500 text-xl">
-        <a href="https://www.buymeacoffee.com/theboringdude" target="_blank">
-          <div className="mx-auto z-40">
-            <Image
-              alt="Buy Me A Coffee"
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-              height="75"
-              width="230"
-            />
-          </div>
-        </a>
-        <div className="mt-4">
-          &copy; {new Date().getFullYear()} |{' '}
-          <a
-            href="https://github.com/TheBoringDude"
-            className="underline hover:text-gray-600 font-black"
-          >
-            @TheBoringDude
-          </a>{' '}
-          |{' '}
-          <button
-            className="hover:underline"
-            onClick={() => setShowTerms(true)}
-          >
-            Terms of Use
-          </button>
-        </div>
-      </footer>
-    </Layout>
-  )
+			{/* api documentation */}
+			<APIDocumentation />
+
+			{/* simple footer */}
+			<footer className="w-4/5 mx-auto text-center py-8 text-gray-500 text-xl">
+				<a
+					href="https://www.buymeacoffee.com/theboringdude"
+					target="_blank"
+				>
+					<div className="mx-auto z-40">
+						<Image
+							alt="Buy Me A Coffee"
+							src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+							height="75"
+							width="230"
+						/>
+					</div>
+				</a>
+				<div className="mt-4">
+					&copy; {new Date().getFullYear()} |{" "}
+					<a
+						href="https://github.com/TheBoringDude"
+						className="underline hover:text-gray-600 font-black"
+					>
+						@TheBoringDude
+					</a>{" "}
+					|{" "}
+					<button
+						className="hover:underline"
+						onClick={() => setShowTerms(true)}
+					>
+						Terms of Use
+					</button>
+				</div>
+			</footer>
+		</Layout>
+	);
 }

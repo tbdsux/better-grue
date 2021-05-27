@@ -119,6 +119,11 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
+"@ootiq/tailwind-blandcolors@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ootiq/tailwind-blandcolors/-/tailwind-blandcolors-0.0.2.tgz#f9150881e462bfeb082be8eac63297f15848896c"
+  integrity sha512-upAXTdrgjOFUdjLO1bWXe6wZIU5pYXrvBBdDLX3iM767G+YIZJU5IHi5gmjCUy3EVh8ibRS3tDeK3Y+xHK5svw==
+
 "@opentelemetry/api@0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-0.14.0.tgz#4e17d8d2f1da72b19374efa7b6526aa001267cae"
