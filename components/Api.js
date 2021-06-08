@@ -6,7 +6,7 @@ export default function APIDocumentation() {
           Basic API Documentation
         </h2>
         <p className="text-xl tracking-wide p-3 text-gray-500">
-          Both endpoints have similar responses but have different{' '}
+          Both endpoints have similar responses but have different{" "}
           <span className="font-bold">methods</span> allowed.
         </p>
       </div>
@@ -15,7 +15,7 @@ export default function APIDocumentation() {
           <li className="mb-12">
             <div className="p-6 rounded-xl shadow-2xl">
               <h3 className="text-3xl text-green-500 font-black flex items-center">
-                <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{' '}
+                <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{" "}
                 Shorten a new url
               </h3>
               <div className="my-3 flex flex-col xs:flex-row items-center text-xl text-gray-600">
@@ -25,12 +25,12 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white overflow-y-scroll">
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-white overflow-y-scroll">
                 <pre>
                   <code>
                     curl -X POST https://grue.cf/api/generate -H 'Content-Type:
                     application/json' <br />
-                    -d {JSON.stringify({ url: 'https://www.google.com' })}
+                    -d {JSON.stringify({ url: "https://www.google.com" })}
                   </code>
                 </pre>
               </div>
@@ -41,18 +41,18 @@ export default function APIDocumentation() {
                     <code>
                       {JSON.stringify(
                         {
-                          _id: '5ffefa6096d4370008ba400e',
-                          request_url: 'https://www.google.com',
-                          redirect: 'https://www.google.com',
+                          _id: "5ffefa6096d4370008ba400e",
+                          request_url: "https://www.google.com",
+                          redirect: "https://www.google.com",
                           shortlink: {
-                            short: 'QU47Q',
-                            long: 'https://grue.cf/QU47Q',
+                            short: "QU47Q",
+                            long: "https://grue.cf/QU47Q",
                           },
-                          created_date: '2021-01-13T13:49:20Z',
-                          last_visit_date: '2021-01-13T13:49:20Z',
+                          created_date: "2021-01-13T13:49:20Z",
+                          last_visit_date: "2021-01-13T13:49:20Z",
                         },
                         null,
-                        2,
+                        2
                       )}
                     </code>
                   </pre>
@@ -63,7 +63,7 @@ export default function APIDocumentation() {
           <li className="mt-12">
             <div className="p-6 rounded-xl shadow-2xl">
               <h3 className="text-3xl text-green-500 font-black flex items-center">
-                <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{' '}
+                <div className="h-4 w-4 bg-green-500 mr-2 rounded-full"></div>{" "}
                 Get grue (shortened / shortlink) data
               </h3>
               <div className="my-3 flex flex-col xs:flex-row items-center text-xl text-gray-600">
@@ -73,7 +73,7 @@ export default function APIDocumentation() {
                 </p>
               </div>
               <hr className="mb-3" />
-              <div className="bg-gray-700 py-2 px-3 rounded-md text-lg text-white overflow-y-scroll">
+              <div className="bg-gray-700 py-2 px-3 rounded-md text-white overflow-y-scroll">
                 <pre>
                   <code>curl https://grue.cf/api/get/QU47Q</code>
                 </pre>
@@ -85,18 +85,18 @@ export default function APIDocumentation() {
                     <code>
                       {JSON.stringify(
                         {
-                          _id: '5ffefa6096d4370008ba400e',
-                          request_url: 'https://www.google.com',
-                          redirect: 'https://www.google.com',
+                          _id: "5ffefa6096d4370008ba400e",
+                          request_url: "https://www.google.com",
+                          redirect: "https://www.google.com",
                           shortlink: {
-                            short: 'QU47Q',
-                            long: 'https://grue.cf/QU47Q',
+                            short: "QU47Q",
+                            long: "https://grue.cf/QU47Q",
                           },
-                          created_date: '2021-01-13T13:49:20Z',
-                          last_visit_date: '2021-01-13T13:49:20Z',
+                          created_date: "2021-01-13T13:49:20Z",
+                          last_visit_date: "2021-01-13T13:49:20Z",
                         },
                         null,
-                        2,
+                        2
                       )}
                     </code>
                   </pre>
@@ -107,5 +107,5 @@ export default function APIDocumentation() {
         </ul>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-export const WebsiteName = 'Grue'
+export const WebsiteName = "Grue";
 
 export default function Layout({ children }) {
   return (
@@ -15,5 +15,5 @@ export default function Layout({ children }) {
       </Head>
       <main className="antialiased">{children}</main>
     </>
-  )
+  );
 }
